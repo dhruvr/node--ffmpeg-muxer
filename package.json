@@ -10,6 +10,9 @@
     "type" : "git",
     "url": "https://github.com/dhruvr/node--ffmpeg-muxer"
   },
+  "bugs": {
+    "url": "https://github.com/dhruvr/node--ffmpeg-muxer/issues"
+  },
   "author": "dhruv",
   "license": "ISC"
 }
