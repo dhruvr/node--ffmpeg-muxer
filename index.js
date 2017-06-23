@@ -2,8 +2,8 @@ var exec = require('child_process').exec;
 
 module.exports.merge = function(videoPath, audioPath, resultPath){
   return new Promise((resolve, reject) => {
-    // console.log(`videoPath :${videoPath}`)
-     exec(`./muxer--ffmpeg/muxer.sh ${videoPath} ${audioPath} ${resultPath}`, function(error, stdout, stderr){
+    var muxerPath = path.join(__dirname, 'muxer--ffmpeg/muxer.sh')
+     exec(`${muxerPath} ${videoPath} ${audioPath} ${resultPath}`, function(error, stdout, stderr){
         if(error){
           console.error(`Problem error: $error`);
           reject(error);
