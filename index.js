@@ -1,4 +1,5 @@
 var exec = require('child_process').exec;
+import path from 'path';
 
 module.exports.merge = function(videoPath, audioPath, resultPath){
   return new Promise((resolve, reject) => {
