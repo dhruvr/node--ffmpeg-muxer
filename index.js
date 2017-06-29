@@ -6,7 +6,7 @@ module.exports.merge = function(videoPath, audioPath, resultPath){
     var muxerPath = path.join(__dirname, 'muxer--ffmpeg/muxer.sh')
      exec(`${muxerPath} ${videoPath} ${audioPath} ${resultPath}`, function(error, stdout, stderr){
         if(error){
-          console.error(`Problem error: $error`);
+          console.error(`Problem error: ${error}`);
           reject(error);
         }
 
